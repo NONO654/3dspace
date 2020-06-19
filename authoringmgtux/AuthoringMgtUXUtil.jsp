@@ -39,7 +39,8 @@
     try     
     {
             if ("displayWorkUnder".equalsIgnoreCase(strMode))
-            {   
+            {
+                System.out.println("=====1====");
             	String objectId      = (String)emxGetParameter(request, "objectId");
             	String changeControlCAName = "";
             	String changeControlCAId = "";
