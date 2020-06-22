@@ -1,3 +1,29 @@
+#Oracle information
 enoUrl=http://192.168.42.128:8081/internal
 username=admin_platform
 password=123
+
+#Profession Matching Information
+O=焊接
+P=特种设备
+Q=船装铁舾
+R=船体
+S=船装管系
+T=居装
+U=居装铁舾
+V=机装管系
+W=空冷通
+X=电装
+Y=涂装
+
+#Phase Code Infomation
+0=A
+1=C
+2=B
+3=P
+4=D
+5=Q
+6=U
+7=Z
+8=E
+9=F
