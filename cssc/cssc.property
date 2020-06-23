@@ -27,3 +27,13 @@ Y=涂装
 7=Z
 8=E
 9=F
+
+#Professional Name Index
+startIndex1=9
+endIndex1=10
+#Sub Paragraph Index
+startIndex2=0
+endIndex2=3
+#Phase Code Index
+startIndex3=7
+endIndex3=8
