@@ -41,7 +41,7 @@ System.out.println("fieldNameActual----------------------------"+fieldNameActual
 		
      var obj =document.getElementById("iframeLeft").contentWindow.document.getElementsByName("favorite");
 	 var shipArray=[];
-		 for(var i in obj){
+		 for(var i = 0 ;i < obj.length;i++){
 			 if(obj[i].checked){
 				 shipArray.push(obj[i].value);
 			 }
@@ -54,7 +54,7 @@ System.out.println("fieldNameActual----------------------------"+fieldNameActual
 		
 	 var obj =document.getElementById("iframeContent").contentWindow.document.getElementsByName("favorite");
 	 var scopeArray=[];
-		 for(var i in obj){
+		 for(var i = 0 ;i < obj.length;i++){
 			 if(obj[i].checked){
 				 scopeArray.push(obj[i].value);
 			 }
