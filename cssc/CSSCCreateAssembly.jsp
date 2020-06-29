@@ -1,6 +1,6 @@
 <%@page import="com.matrixone.apps.domain.*,com.matrixone.apps.domain.util.*,matrix.util.*,matrix.db.Context,com.matrixone.servlet.Framework,com.matrixone.apps.common.Company,com.matrixone.apps.common.Person,com.matrixone.apps.program.Task"%>
 <%@page
-    import="java.util.Set,java.util.HashSet,java.util.*,java.text.SimpleDateFormat,java.math.BigDecimal,java.util.Calendar,java.text.*,com.matrixone.apps.framework.ui.UIUtil"%>
+		import="java.util.Set,java.util.HashSet,java.util.*,java.text.SimpleDateFormat,java.math.BigDecimal,java.util.Calendar,java.text.*,com.matrixone.apps.framework.ui.UIUtil"%>
 <%@include file="../common/emxUIConstantsInclude.inc"%>
 <%@include file="../emxRequestWrapperMethods.inc"%>
 <%@include file="../emxStyleDefaultInclude.inc"%>
@@ -16,7 +16,7 @@
 					resultString+=value;
 				}
 			}
-			
+
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
@@ -27,20 +27,20 @@
 <%
 	response.setContentType("text/html;charset=UTF-8");
 	Context context = Framework.getFrameContext(session);
-	
+
 	String objectId = "";
 	String taskName = "";
 	String information = "";
 	DomainObject taskDom = DomainObject.newInstance(context);
-	
-	try 
+
+	try
 	{
 		String[] emxTableRowId	= emxGetParameterValues(request, "emxTableRowId");
 		if(emxTableRowId != null && emxTableRowId.length ==1)
 		{
 			String emxTableRowIds[] = emxTableRowId[0].split("\\|");
 			objectId =  emxTableRowIds[1] ;
-		} 
+		}
 		taskDom.setId(objectId);
 		String taskType = taskDom.getInfo(context, "type");
 		String symbolicTypeName = PropertyUtil.getAliasForAdmin(context, "Type", "CreateAssembly", true);
@@ -67,16 +67,16 @@
 		}
 	}catch(Exception e){
 		e.printStackTrace();
-	}	
-		
+	}
+
 %>
-	
 
-	<script type="text/javascript">
-			window.parent.location.href=window.parent.location.href;
-		
-	</script>
-	
-	
 
-	
+<script type="text/javascript">
+	top.parent.opener.location.href = top.parent.opener.location.href;
+	top.close();
+</script>
+<%@include file = "../emxUICommonEndOfPageInclude.inc" %>
+
+
+
