@@ -69,7 +69,15 @@
 %>
 
  <script language="javascript">
-	window.top.opener.parent.opener.location.href = window.top.opener.parent.opener.location.href;
-	window.top.opener.parent.close();
-	window.close();
+	 if (parent.window.opener != null)
+	 {
+		 //parent.window.opener.parent.location.reload();
+		 parent.window.opener.parent.location.href = parent.window.opener.parent.location.href;
+		 getTopWindow().close();
+	 }
+	 else
+	 {
+		 parent.window.location.href = parent.window.location.href;
+		 //parent.location.reload();
+	 }
  </script>
